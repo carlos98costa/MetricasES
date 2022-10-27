@@ -393,7 +393,14 @@ while True:
         vhT = float(values['-VHT-'])
         vhT = round(vhT, 2)
         tKLOC = FPr * lp
-        indicador = round(tKLOC / ts, 2)
+        #indicador = tKLOC / ts
+        ind = tKLOC / ts
+        qtdC = 2
+        indicador = (int(ind * 10**qtdC) /10**qtdC)
+        #bla = str(ind)
+        #tratar = bla[0:4]
+        #indicador = float(tratar)
+
         custo = round(indicador * 132 * vhT, 2)
         diasR = int(indicador * diasM)
         horasR = round((indicador * diasM) - diasR, 2)
